@@ -1,0 +1,29 @@
+-- Create a cafe shop database
+
+CREATE TABLE Cafe (id INTEGER PRIMARY KEY, name TEXT, inventory INTEGER, cost INTEGER, price INTEGER);
+
+INSERT INTO Cafe VALUES
+(1, "Cafe Latte", 47, 1.50, 4.50),
+(2, "Mocha Latte", 15, 2, 6.50),
+(3, "Ube Latte", 20, 3.25, 8),
+(4, "Americano", 14, .50, 3),
+(5, "Cappuccino", 45, 2, 4.50),
+(6, "Espresso", 87, .50, 3),
+(7, "Coffee", 14, 1.50, 5),
+(8, "Iced Coffee", 26, 1.50, 7),
+(9, "Cold Brew", 67, 3, 6),
+(10, "Iced Latte", 28, 2, 6.50),
+(11, "Iced Macchiato", 29, 3, 8),
+(12, "Matcha Latte", 37, 3, 6),
+(13, "Iced Matcha Latte", 32, 3, 8),
+(14, "Hot Chocolate", 43, 2, 6),
+(15, "Iced Chai Latte", 14, 4.50, 8);
+
+--display the database ordered by price. 
+SELECT * FROM Cafe ORDER BY price;
+
+--what items are low in stock (less than or equal to 20)?
+SELECT * FROM Cafe WHERE inventory <= 20 ORDER BY inventory;
+
+--what are the 5 cheapest drinks to make?
+SELECT * FROM CAFE ORDER BY cost asc LIMIT 5;
